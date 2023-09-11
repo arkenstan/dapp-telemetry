@@ -1,0 +1,17 @@
+{
+  "name": "telemetry-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gun": "^0.2020.1239",
+    "node-os-utils": "^1.3.7",
+    "uuid": "^9.0.0"
+  }
+}
