@@ -4,10 +4,13 @@ const uuid = require('uuid');
 
 const agentId = uuid.v4();
 
-const gun = GUN(['http://localhost:3030/gun']);
+const gun = GUN(['http://localhost:8765/gun']);
 
 const getStats = () => {
-  const RAM = `${os.totalmem() - os.freemem()} / ${os.totalmem()}`;
+  let RAM = {}
+  RAM.used = `${os.totalmem() - os.freemem()}`
+  RAM.free=`${os.freemem()}` 
+  RAM = JSON.stringify(RAM)
   const CPU = JSON.stringify(os.cpus());
   return { host: agentId, RAM, CPU };
 };
